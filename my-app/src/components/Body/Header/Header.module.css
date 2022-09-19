@@ -1,0 +1,10 @@
+.input {
+  margin: 40px 0px 0px 40px;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+  outline: none;
+  font-size: 20px;
+  width: 600px;
+  color: white;
+}
