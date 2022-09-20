@@ -4,7 +4,7 @@ import style from './/TopPart.module.css'
 const TopPart = () => {
  return (
   <div className={style.div}>
-  Top Films of 2022
+  Top Films
   </div>
  );
 };

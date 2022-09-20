@@ -17,7 +17,7 @@ const Navbar = () => {
        </div>
       )
      })}
-    <div className="avatar"></div>
+     <div className="avatar"></div>
    </div>
   </>
  );

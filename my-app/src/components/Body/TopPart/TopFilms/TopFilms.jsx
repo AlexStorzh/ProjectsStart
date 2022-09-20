@@ -19,7 +19,7 @@ const TopFilms = () => {
 
  return (
   <div className={style.main}>
-   {movies.slice(0, 4).map((movie) => {
+   {movies.slice(6, 10).map((movie) => {
     return (
      <Movie key={movie.id} {...movie} />
     )
