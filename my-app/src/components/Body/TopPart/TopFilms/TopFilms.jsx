@@ -1,15 +1,27 @@
 import React from 'react';
-import { Films } from './Films';
+import { useState, useEffect } from "react";
 import style from './TopFilms.module.css'
+import Movie from './Movie/Movie';
+
 
 const TopFilms = () => {
+ const [movies, setMovies] = useState([]);
+
+ useEffect(() => {
+  const url = `https://yts.mx/api/v2/list_movies.json`;
+
+  fetch(url)
+   .then((response) => response.json())
+   .then((data) => {
+    setMovies(data.data.movies)
+   });
+ }, []);
+
  return (
   <div className={style.main}>
-   {Films.map((e, index) => {
+   {movies.slice(0, 4).map((movie) => {
     return (
-     <div key={index} className={style.film}>
-      
-     </div>
+     <Movie key={movie.id} {...movie} />
     )
    })}
   </div>

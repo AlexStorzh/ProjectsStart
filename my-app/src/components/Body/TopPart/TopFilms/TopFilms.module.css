@@ -2,12 +2,3 @@
  display: flex;
  flex-wrap: wrap;
 }
-
-.film {
- width: 400px;
- height: 230px;
- background-color: white;
- border: solid 1px black;
- margin: 20px;
- border-radius: 10px;
-}

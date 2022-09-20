@@ -3,7 +3,6 @@ import style from './/Header.module.css'
 
 const Header = () => {
  const [text, setText] = React.useState('');
- console.log(text);
  return (
   <div className={style.main}>
    <img src="" alt="" />

@@ -1,0 +1,19 @@
+.movie {
+ width: 400px;
+ height: 230px;
+ border: solid 1px black;
+ margin: 20px;
+ border-radius: 10px;
+ 
+}
+
+.img {
+  width: 400px;
+   height: 230px;
+    border-radius: 10px;
+}
+
+.h3 {
+ color: aliceblue;
+ font-size: larger;
+}
