@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './/TopPart.module.css'
+import style from './/TopText.module.css'
 
-const TopPart = () => {
+const TopText = () => {
  return (
   <div className={style.div}>
   Top Films
@@ -9,4 +9,4 @@ const TopPart = () => {
  );
 };
 
-export default TopPart;
+export default TopText;

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.div {
+color: aliceblue;
+font-size: 28px;
+letter-spacing: 2px;
+margin: 20px 0px 30px 40px;
+font-family: 'Anton', sans-serif;
+cursor: default;
+}
