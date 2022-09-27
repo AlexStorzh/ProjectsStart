@@ -5,15 +5,23 @@ import { BsFillPersonFill, BsBookmark } from 'react-icons/bs'
 const HeaderLeft = () => {
  return (
   <div className="navbar__header__right">
-    <a href="/dragon" className='navbar__icon'>
-     <FaDragon size='30px' color='white' />
-    </a>
-    <a href="/dragon" className='navbar__icon'>
-     <BsFillPersonFill size='30px' color='white' />
-     </a>
-    <a href="/dragon" className='navbar__icon'>
-     <BsBookmark size='28px' color='white' />
-     </a>
+    <div className='nav-popover__trigger'>
+     <div className="navbar__btn">
+    <FaDragon className="svg-color--fill svg-icon" size='30px' />
+    </div>
+   </div>
+   <div className='nav-popover__trigger'>
+     <div className="navbar__btn">
+     <BsFillPersonFill className="svg-color--fill svg-icon" size='30px'  />
+ </div>
+   </div>
+     
+    <div className='nav-popover__trigger'>
+     <div className="navbar__btn">
+     <BsBookmark className="svg-color--fill svg-icon" size='28px' />
+ </div>
+   </div>
+     
    </div>
  );
 };

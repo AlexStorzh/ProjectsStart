@@ -9,7 +9,6 @@ const Navbar = () => {
  return (
   <header className='navbar__header'>
    <HeaderRight />
-
    <HeaderLeft />
   </header>
  );

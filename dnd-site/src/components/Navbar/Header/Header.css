@@ -1,9 +1,9 @@
 .navbar__header {
- color: white;
+ color: rgb(185, 185, 185);
  display:flex;
  width: 100%;
  justify-content: space-between;
- padding: 0 24px;
+ padding: 24px;
 }
 
 .navbar__header__link{
@@ -26,20 +26,60 @@
 .navbar__header__right{
  display:flex;
  align-items: center;
+ color: rgb(185, 185, 185);
 }
 
-.navbar__btn{
+.svg-icon.svg-color--fill {
+ fill: currentColor;
+ stroke: none;
+}
+
+.svg-icon {
+ overflow: hidden;
+ flex-shrink: 0;
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+
+.navbar__btn {
+ cursor: pointer;
+ padding: 6px;
+ align-items: center;
+}
+
+.hamburger{
  display: block;
  height: auto;
  padding: 7px 9px;
  cursor: pointer;
 }
+
 .line {
  width: 22px;
  height: 2px;
- background-color: white;
+ background-color: rgb(185, 185, 185);
  display: block;
  margin: 5px auto;
  transition: all .3s ease-in-out;
  border-radius: 2px;
+}
+
+.navbar__header__link:hover {
+ border-radius: 10px;
+ background-color:#3f4a66;
+ transition: 0.3s;
+ color:rgb(255, 255, 255);
+}
+
+.navbar__btn:hover{
+ border-radius: 10px;
+  background-color: #3f4a66;
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+}
+
+.hamburger:hover .line:first-child {
+ transform: translateX(-6px) translateZ(0);
+ width: 14px;
 }
