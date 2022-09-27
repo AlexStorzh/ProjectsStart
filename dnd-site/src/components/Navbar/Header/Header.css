@@ -1,0 +1,45 @@
+.navbar__header {
+ color: white;
+ display:flex;
+ width: 100%;
+ justify-content: space-between;
+ padding: 0 24px;
+}
+
+.navbar__header__link{
+ color:inherit;
+ padding: 10px;
+ text-decoration: none;
+ font-family: Open Sans, sans-serif;
+ font-size: larger;
+}
+
+.navbar__header__left{
+ display:flex;
+ align-items: center;
+}
+
+.navbar__icon {
+ padding: 8px;
+}
+
+.navbar__header__right{
+ display:flex;
+ align-items: center;
+}
+
+.navbar__btn{
+ display: block;
+ height: auto;
+ padding: 7px 9px;
+ cursor: pointer;
+}
+.line {
+ width: 22px;
+ height: 2px;
+ background-color: white;
+ display: block;
+ margin: 5px auto;
+ transition: all .3s ease-in-out;
+ border-radius: 2px;
+}
