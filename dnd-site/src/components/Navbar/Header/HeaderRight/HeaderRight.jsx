@@ -1,18 +1,29 @@
 import React from 'react';
+import {GiSpikedDragonHead} from 'react-icons/gi'
+import { BsFillPersonFill, BsBookmark } from 'react-icons/bs'
 
-const HeaderRight = () => {
+const HeaderLeft = () => {
  return (
-  <div className="navbar__header__left">
+  <div className="navbar__header__right">
     <div className='nav-popover__trigger'>
      <div className="navbar__btn">
-      <span className='line'></span>
-      <span className='line'></span>
-      <span className='line'></span>
-     </div>
+    <GiSpikedDragonHead className="svg-icon" size='30px' />
     </div>
-    <a href ='/' className='navbar__header__link'>DnD Helper</a>
+   </div>
+   <div className='nav-popover__trigger'>
+     <div className="navbar__btn">
+     <BsFillPersonFill className="svg-icon" size='30px'  />
+ </div>
+   </div>
+     
+    <div className='nav-popover__trigger'>
+     <div className="navbar__btn">
+     <BsBookmark className="svg-icon" size='28px' />
+ </div>
+   </div>
+     
    </div>
  );
 };
 
-export default HeaderRight;
+export default HeaderLeft;

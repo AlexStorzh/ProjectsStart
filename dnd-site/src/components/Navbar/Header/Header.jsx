@@ -8,8 +8,8 @@ import HeaderRight from './HeaderRight/HeaderRight';
 const Navbar = () => {
  return (
   <header className='navbar__header'>
-   <HeaderRight />
    <HeaderLeft />
+   <HeaderRight />
   </header>
  );
 };
