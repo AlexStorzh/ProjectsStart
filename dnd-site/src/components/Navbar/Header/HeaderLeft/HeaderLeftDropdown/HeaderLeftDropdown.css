@@ -1,0 +1,10 @@
+.dropdown_popover{
+ border: 1px solid white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 400px;
+ border-radius: 10px;
+ height: 400px;
+ z-index: 100;
+}

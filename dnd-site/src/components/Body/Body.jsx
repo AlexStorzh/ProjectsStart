@@ -1,10 +1,15 @@
 import React from 'react';
 import './Body.css'
+import Header from './Header/Header';
 
 const Body = () => {
  return (
   <div id='container' className='container'>
-   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque explicabo pariatur quia sunt vero saepe optio hic sapiente quas quasi eius, eos debitis, tempora sit voluptas fugiat id impedit quam.
+   <div className="main_page_wrapper">
+    <div className="main_block">
+     <Header/>
+    </div>
+   </div>
   </div>
  );
 };

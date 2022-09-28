@@ -1,0 +1,19 @@
+.create__btn {
+ border: 2px solid white;
+ border-radius: 10px;
+ padding: 10px;
+ text-align: center;
+ font-size: 24px;
+ font-family: Open Sans, sans-serif;
+ cursor: pointer;
+ box-shadow: 0px 3px white;
+}
+
+.create__btn:hover {
+ transition: 0.3s ease-in-out;
+ transform: translateY(10%);
+}
+
+
+
+

@@ -42,6 +42,11 @@
  align-items: center;
 }
 
+.nav-popover__trigger_active {
+  z-index: 120;
+  position: relative;
+}
+
 .hamburger{
  display: block;
  height: auto;
