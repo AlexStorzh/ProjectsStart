@@ -76,7 +76,6 @@
 }
 
 .navbar__btn:hover{
-
  transition: 0.3s;
  color: rgb(255, 255, 255);
  background-color:#3f4a66;
@@ -85,4 +84,16 @@
 .hamburger:hover .line:first-child {
  transform: translateX(-6px) translateZ(0);
  width: 14px;
+}
+
+@media screen and (min-width:320px) and (max-width:1024px) {
+ .hamburger:hover .line:first-child {
+   transform: translateX(0px) translateZ(0);
+   width: 22px;
+  }
+  .navbar__btn:hover {
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  background-color: #3f4a66;
+  }
 }

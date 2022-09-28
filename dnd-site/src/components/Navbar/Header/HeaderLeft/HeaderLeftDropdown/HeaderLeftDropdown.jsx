@@ -16,6 +16,8 @@ const HeaderLeftDropdownPopover = () => {
    <DropDownItem name ='History'/>
    <DropDownItem name ='Weapons'/>
    <DropDownItem name ='Armor'/>
+   <DropDownItem name ='History'/>
+   <DropDownItem name ='Magick'/>
   </div>
  );
 };
