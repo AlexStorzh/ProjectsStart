@@ -45,6 +45,10 @@
 .nav-popover__trigger_active {
   z-index: 120;
   position: relative;
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  background-color: #3f4a66;
+  border-radius: 10px;
 }
 
 .hamburger{

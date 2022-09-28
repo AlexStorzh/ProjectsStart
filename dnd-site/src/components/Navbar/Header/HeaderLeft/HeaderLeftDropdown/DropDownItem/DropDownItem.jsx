@@ -1,9 +1,12 @@
 import React from 'react';
+import style from './DropDownItems.module.css'
+import { GiCircle } from 'react-icons/gi'
 
 function DropDownItem(props) {
  return (
-  <div>
-   1
+  <div className={style.item}>
+
+   <span>{props.name}</span>
   </div>
  );
 }

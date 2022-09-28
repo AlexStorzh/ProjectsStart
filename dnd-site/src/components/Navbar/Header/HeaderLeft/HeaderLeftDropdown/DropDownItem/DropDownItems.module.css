@@ -1,0 +1,17 @@
+.item {
+ display: flex;
+ width: 400px;
+ height: 30px;
+ font-family: Open Sans, sans-serif;
+ cursor: pointer;
+ text-align: center;
+ align-items:center;
+ justify-content: center;
+}
+
+
+
+.item:hover {
+ transition: 0.3s;
+ background-color: #3f4a66;;
+}

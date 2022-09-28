@@ -3,8 +3,31 @@
  position: fixed;
  top: 0;
  left: 0;
- width: 400px;
  border-radius: 10px;
- height: 400px;
  z-index: 100;
+ background-color: #141a21;
+ overflow: hidden;
+}
+
+.popover_header {
+ display: flex;
+ justify-content: center;
+ align-items:center;
+ height: 70px;
+ width: 350px;
+ font-family: Open Sans, sans-serif;
+ border-bottom: 0.5px solid white;
+ margin: auto;
+ cursor:default;
+}
+.title {
+ font-size: small;
+}
+
+.text {
+ border-top: 1px solid whit;
+ text-align: center;
+ font-size: 27px;
+ letter-spacing: 4px;
+ font-weight: 1000;
 }
