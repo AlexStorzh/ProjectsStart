@@ -30,7 +30,7 @@ const HeaderRight = () => {
       <span className='line'></span>
     </div>
    </div>
-    {open && <HeaderLeftDropdownPopover/>}
+    {open && <HeaderLeftDropdownPopover/>} 
    <div className="navbar__section">
     <a href='/' className='navbar__header__link'>DnD Helper</a>
     </div>
