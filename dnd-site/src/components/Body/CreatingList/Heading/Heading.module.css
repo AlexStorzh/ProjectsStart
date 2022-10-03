@@ -1,0 +1,29 @@
+.heading {
+ display: flex;
+ border-bottom: 2px solid white;
+}
+.character_name {
+ display: flex;
+ border-right: 2px solid white;
+ align-items: center;
+}
+.character_info {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ width: 100%;
+ justify-items: center;
+ margin-bottom: 10px;
+}
+.character_name_input {
+ font-size: larger;
+ text-align: center;
+ background: transparent;
+ border: 0px;
+ color: white;
+ outline: none;
+}
+.item {
+display: grid;
+text-align: center;
+font-size: larger;
+}
