@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Attributes from './Attributes';
 import style from './BodyPart.module.css'
 
 const BodyPart = () => {
+ const [parts, setParts] = useState([
+  { id: 1, name: 'Strenght'},
+  { id: 2, name: 'Dexterity'},
+  { id: 3, name: 'Wisdom'},
+  { id: 4, name: 'Charisma'},
+  { id: 5, name: 'Inteleggence'},
+  { id: 6, name: 'Constitution'},
+ ])
+
  return (
   <div className={style.bodypart}>
    <div className={style.attributes_bar}>
-    <div className={style.attribute_item}>Strengh<input type="text" maxlength='2' /></div>
-    <div className={style.attribute_item}>Dexterity<input type="text" maxlength='2' /></div>
-    <div className={style.attribute_item}>Wisdom<input type="text" maxlength='2' /></div>
-    <div className={style.attribute_item}>Charisma<input type="text" maxlength='2' /></div>
-    <div className={style.attribute_item}>Constitution<input type="text" maxlength='2'  /></div>
-    <div className={style.attribute_item}>Inteleggence<input type="text" maxlength='2'  /></div>
+    {parts.map(part =>
+     <Attributes part={part} key={part.id} />)}
    </div>
    <div className="perks"></div>
    <div className="inventory"></div>
