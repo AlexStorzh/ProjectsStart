@@ -13,10 +13,12 @@ const Heading = () => {
 
  return (
   <div className={style.heading}>
-   <div className={style.character_name}><input type="text" placeholder='Your Name!' className={style.character_name_input} /></div>
+   <div className={style.character_name}>
+    <input type="text" placeholder='Your Name!' className={style.character_name_input} />
+   </div>
    <div className={style.character_info}>
     {info.map(e =>
-     <Info e={e} key={e.id} />)}
+     <Info e={e} key={e.name} />)}
    </div>
   </div>
  );

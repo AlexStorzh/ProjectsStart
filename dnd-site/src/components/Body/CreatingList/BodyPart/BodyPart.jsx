@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
-import Attribute from './Attribute';
 import style from './BodyPart.module.css'
+import Attribute from './Attribute';
+import Inspiration from './Inspiration';
+import Proficiency from './Proficiency';
+import SavingThrow from './SavingThrow';
+import Skill from './Skill';
+import {savingThrows, skills, attributes} from '../../../../constants/constants.js'
+
 
 const BodyPart = () => {
- const [attributes, setAttributes] = useState([
-  { id: 1, name: 'Strenght'},
-  { id: 2, name: 'Dexterity'},
-  { id: 3, name: 'Wisdom'},
-  { id: 4, name: 'Charisma'},
-  { id: 5, name: 'Inteleggence'},
-  { id: 6, name: 'Constitution'},
- ])
-
+ 
  return (
   <div className={style.bodypart}>
    <div className={style.attributes_bar}>
     {attributes.map(attribute =>
-     <Attribute attribute={attribute} key={attribute.id} />)}
+     <Attribute attribute={attribute} key={attribute.name} />)}
    </div>
-   <div className="perks"></div>
-   <div className="inventory"></div>
-  </div>
+   <div className={style.perks}>
+    <Inspiration />
+    <Proficiency />
+      <div className={style.savingthrow_wrapper}>
+    {savingThrows.map(savingthrow =>
+     <SavingThrow savingthrow={savingthrow} key={savingthrow.name} />)}
+    </div>
+    <div className={style.skills_wrapper}>
+     {skills.map(skill =>
+      <Skill skill={skill} key={skill.name} />)}
+    </div>
+    </div>
+   </div>
  );
 };
 

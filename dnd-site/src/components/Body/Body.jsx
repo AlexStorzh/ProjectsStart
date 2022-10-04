@@ -14,7 +14,7 @@ const [showList, setShowList] = useState(false)
     <div className="main_block" >
      <div className="header">
       <div className={'create__btn' + (showList ? '__active' : '')} onClick={() => setShowList(!showList)}>
-   Click to create a new character!
+   {showList ? 'Close the creating list.' : "Click to create a new character!" }
        </div>
   </div>
      {showList && <CreatingList />}

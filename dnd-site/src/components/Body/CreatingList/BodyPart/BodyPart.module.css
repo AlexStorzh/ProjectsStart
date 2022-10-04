@@ -6,6 +6,7 @@ width: 100px;
 }
 .attribute_item {
  display: grid;
+ grid-template-rows: 1fr 1fr 0.01fr 0.25FR;
  border-bottom-left-radius: 20% ;
  border-bottom-right-radius: 20% ;
  border-right: 1px solid white;
@@ -17,9 +18,7 @@ width: 100px;
  font-size: larger;
  overflow: hidden;
 }
-
 .attribute_item input {
- font-size: larger;
  text-align: center;
  justify-self: center;
  background: transparent;
@@ -28,4 +27,103 @@ width: 100px;
  outline: none;
  width: 40px;
  text-align: center;
+}
+.attribute_item input:invalid {
+  color: red;
+  text-decoration:line-through;
+}
+.attribut_value {
+ width: 20px;
+ height: 20px;
+ border-radius: 100%;
+ border: 1px solid white;
+}
+.attribute_number {
+ font-size: 18px;
+}
+.attribute_value {
+ font-size: 36px;
+}
+
+
+/* PERKS STYLE */
+
+.perks {
+ margin: 10px 0px 0px 20px
+}
+.inspitation_wrapper {
+ display: flex;
+}
+.inspiration_input {
+ height: 44px;
+ width: 44px;
+ font-size: 34px;
+ color: white;
+ text-align: center;
+ background: transparent;
+ outline: none;
+ border: 1px solid white;
+}
+.inspiration_input:invalid {
+ color: red;
+ text-decoration: line-through;
+}
+.inspiration_text {
+ width: 200px;
+ text-align: center;
+ align-self: center;
+ font-size: 26px;
+ border: 1px solid white;
+ border-bottom-right-radius: 20px;
+ border-top-right-radius: 20px;
+ border-left: 0px;
+ padding: 2px;
+ cursor: default;
+}
+.proficiency_wrapper {
+ display: flex;
+ margin-top: 15px;
+}
+.savingthrow_wrapper {
+ margin-top: 15px;
+}
+.savingthrow_element {
+ display: flex;
+ border: 1px solid white;
+}
+.savingthrow_input {
+ width: 16px;
+ text-align: center;
+ font-size: 12px;
+ background-color: transparent;
+ color: white;
+ outline: none;
+ border: 0px;
+ border-bottom: 1px dotted white;
+ margin: 0px 10px 5px 50px;
+}
+.savingthrow_text {
+ margin: auto;
+}
+.skill_element {
+ display: flex;
+ border: 1px solid white;
+}
+.skill_input {
+ width: 16px;
+ text-align: center;
+ font-size: 12px;
+ background-color: transparent;
+ color: white;
+ outline: none;
+ border: 0px;
+ border-bottom: 1px dotted white;
+ margin: 0px 10px 5px 50px;
+}
+.skills_wrapper {
+ margin-top: 15px;
+ margin-bottom: 15px;
+}
+.skill_text {
+ margin: auto;
 }
