@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Attributes from './Attributes';
+import Attribute from './Attribute';
 import style from './BodyPart.module.css'
 
 const BodyPart = () => {
- const [parts, setParts] = useState([
+ const [attributes, setAttributes] = useState([
   { id: 1, name: 'Strenght'},
   { id: 2, name: 'Dexterity'},
   { id: 3, name: 'Wisdom'},
@@ -15,8 +15,8 @@ const BodyPart = () => {
  return (
   <div className={style.bodypart}>
    <div className={style.attributes_bar}>
-    {parts.map(part =>
-     <Attributes part={part} key={part.id} />)}
+    {attributes.map(attribute =>
+     <Attribute attribute={attribute} key={attribute.id} />)}
    </div>
    <div className="perks"></div>
    <div className="inventory"></div>
