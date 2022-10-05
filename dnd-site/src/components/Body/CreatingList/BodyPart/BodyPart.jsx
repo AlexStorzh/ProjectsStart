@@ -9,7 +9,6 @@ import {savingThrows, skills, attributes} from '../../../../constants/constants.
 
 
 const BodyPart = () => {
- 
  return (
   <div className={style.bodypart}>
    <div className={style.attributes_bar}>
