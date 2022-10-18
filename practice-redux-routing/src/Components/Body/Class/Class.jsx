@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import style from './Class.module.css'
 
 
 const Class = (data) => {
-console.log(data)
+
+ const [message, setMessage] = useState();
+
+ const showMessage = (e) => {
+  console.log(e.target)
+}
+
  return (
-  <div>
+  <div className={style.template}>
    {data.data.map((e) =>
-    <div>
-     <h1>{e.name}</h1>
+    <div
+     className={style.card}
+     key={e.name}
+     onClick={showMessage}
+    >
+     <h1> {e.name}</h1>
      <p>{e.description}</p>
      {e.attributes.map((attr) =>
-      <li>{attr.key} {attr.value}</li>)}
+      <li value={attr.value} key={attr.key}>{attr.key} {attr.value}</li>)}
     </div>
-
    )}
   </div>
  );

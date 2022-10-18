@@ -18,7 +18,8 @@ const Body = () => {
      {visible && <div onClick={removeElement} className={style.button}>
    Click to create character!
      </div>}
-     {!visible && <Class data={classes} />}
+     {!visible && <Class data={classes}/>}
+     {!visible && <button onClick={removeElement}>Close</button>}
     </div>
    </div>
   </div>
