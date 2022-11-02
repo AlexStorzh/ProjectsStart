@@ -1,20 +1,20 @@
 .container {
   background-color: yellowgreen;
- display: flex;
+ display: grid;
  border-radius: 20px;
- border: 1px solid white;
+ border: 1px solid rgb(189, 102, 102);
  justify-content: space-between;
  align-items: center;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
+ cursor: pointer;
+ height: 6vw 100%;
 }
 .help_pick {
+ padding: 10px;
  color: white;
  font-size: 56px;
- max-width: 440px;
- width: 100%;
  text-align: center;
 }
 #step {
- border-left: 2px solid black;
+ border-top: 2px solid black;
 }

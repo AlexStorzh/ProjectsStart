@@ -32,7 +32,7 @@ const FinalCharacter = ({ page, setPage, formData }) => {
     <p>{formData.race}</p>
     <p>{formData.class}</p>
       
-    Your Character Attributes
+    Your Character Modifires
     {finalCharacterAttributes.map((e) =>
      <li key={e.index}>{e.name} {e.value}</li>)}  
    </div>

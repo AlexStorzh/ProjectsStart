@@ -6,4 +6,6 @@
  border: 1px solid black;
  cursor: pointer;
  list-style: none;
+ text-align: center;
+ width: 400px;
 }
