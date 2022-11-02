@@ -120,3 +120,37 @@ export const classes = [
   description: "Mage dsmfim dsamm jkladsmj kladsm idjka nkadsm kasdj asdkl "
  },
 ]
+
+export const race = [
+ {
+  race: 'Human',
+  attributes: [{
+   key: 'AGI',
+   value: 1,
+  },
+  {
+   key: 'STR',
+   value: 1,
+  },
+  {
+   key: 'WIS',
+   value: 1,
+  },
+  {
+   key: 'INT',
+   value: 1,
+  },
+  {
+   key: 'CHA',
+   value: 1,
+  },
+  {
+   key: 'END',
+   value: 1,
+  },]
+ },
+]
+
+export default {
+ classes, race
+}

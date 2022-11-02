@@ -11,14 +11,3 @@
   justify-content: center;
   align-items: center;
 }
-.button {
- color: white;
- border-radius: 20px;
- border: 3px solid white;
- padding: 3px;
- font-size: 46px;
- background-color: yellowgreen;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- text-align: center;
- cursor: pointer;
-}

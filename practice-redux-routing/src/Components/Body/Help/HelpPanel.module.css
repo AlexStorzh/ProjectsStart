@@ -1,0 +1,20 @@
+.container {
+  background-color: yellowgreen;
+ display: flex;
+ border-radius: 20px;
+ border: 1px solid white;
+ justify-content: space-between;
+ align-items: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+.help_pick {
+ color: white;
+ font-size: 56px;
+ max-width: 440px;
+ width: 100%;
+ text-align: center;
+}
+#step {
+ border-left: 2px solid black;
+}
