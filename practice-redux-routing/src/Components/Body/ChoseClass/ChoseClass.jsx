@@ -1,15 +1,17 @@
-import style from './Class.module.css'
-import classes from '../../../constants/constants'
+import style from './ChoseClass.module.css'
+import {classes} from '../../../constants/constants'
 
 const Class = ({page, setPage, formData, setFormData}) => {
  let typeOfCharacter = classes;
  const receiveClassType = (e, character) => {
   setFormData({ ...formData, class: character.name, attributes: character.attributes })
   setPage(page + 1);
-}
+ }
+ 
+
  return (
   <div className={style.template}>
-   {typeOfCharacter.classes.map((e) =>
+   {typeOfCharacter.map((e) =>
     <div
      className={style.card}
      key={e.name}
@@ -17,8 +19,6 @@ const Class = ({page, setPage, formData, setFormData}) => {
     >
      <h1> {e.name}</h1> 
      <p>{e.description}</p>
-     {e.attributes.map((attr) =>
-      <li value={attr.value} key={attr.key}>{attr.key} {attr.value}</li>)}
     </div> 
    )}
       <br />

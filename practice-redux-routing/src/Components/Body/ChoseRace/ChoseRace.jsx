@@ -1,9 +1,9 @@
 import React from 'react';
-import race from '../../../constants/constants'
+import {race} from '../../../constants/constants'
 import style from './ChoseRace.module.css'
 
 const ChoseRace = ({page, setPage, formData, setFormData}) => {
-let typeOfRace = race.race;
+let typeOfRace =race;
  const receiveRaceType = (e, chosen) => {
   setFormData({ ...formData, race: chosen.race, raceAttributes: chosen.attributes })
   setPage(page + 1)

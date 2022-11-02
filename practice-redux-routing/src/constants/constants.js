@@ -1,4 +1,4 @@
-export const classes = [
+const classes = [
  {
   name: 'Rogue',
   picture: ' ',
@@ -121,7 +121,7 @@ export const classes = [
  },
 ]
 
-export const race = [
+const race = [
  {
   race: 'Human',
   attributes: [{
@@ -151,6 +151,6 @@ export const race = [
  },
 ]
 
-export default {
- classes, race
-}
+const attributesName = ['AGI', 'STR', 'WIS', 'INT', 'CHA', 'END'];
+
+export  {classes, race, attributesName}

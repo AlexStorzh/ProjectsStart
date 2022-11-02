@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import style from './Body.module.css'
-import CreateButton from './Button/CreateButton';
+import CreateButton from './CreateButton/CreateButton';
 import HelpPanel from './Help/HelpPanel';
 import CharacterName from './CharacterName/CharacterName';
-import Class from './Class/Class';
+import ChoseClass from './ChoseClass/ChoseClass';
 import ChoseRace from './ChoseRace/ChoseRace';
 import FinalCharacter from './FinalCharacter/FinalCharacter';
 
@@ -35,7 +35,7 @@ const componentList = [
    formData={formData}
    setFormData={setFormData}
   />,
-  <Class
+  <ChoseClass
     page={page}
     setPage={setPage}
     formData={formData}
