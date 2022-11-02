@@ -9,7 +9,7 @@ const FinalCharacter = ({ page, setPage, formData }) => {
 
   formData.attributes.map((e) =>
   attributesFinalChar.push(e)
-  )
+ )
   formData.raceAttributes.map((e) =>
   attributesFinalRace.push(e)
  )
@@ -22,13 +22,9 @@ const FinalCharacter = ({ page, setPage, formData }) => {
    return attributesSum
  }
    sumArrays(attributesFinalChar, attributesFinalRace)
-
-  
   let finalAttributesSum = attributesName.map(function (value, index) {
    return [value, attributesSum[index]]
   });
-
-
  return (
   <div>
    <div>
@@ -38,7 +34,7 @@ const FinalCharacter = ({ page, setPage, formData }) => {
       
     Your Character Attributes
     {finalAttributesSum.map((e) =>
-     <li key={e.index}>{e[0]} - {e[1]}</li>)}  
+     <li key={e.index}>{e[0]} - {Math.round(e[1] / 2)}</li>)}  
    </div>
    <button onClick={() => {
      setPage(page - 1)
