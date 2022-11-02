@@ -17,9 +17,34 @@ const [formData, setFormData] = useState({
  class: "",
  attributes: [],
  raceAttributes: [],
+ finalCharacterAttributes: [
+ {
+   name: 'AGI',
+   value: ''
+  },
+  {
+   name: 'STR',
+   value: ''
+  },
+  {
+   name: 'WIS',
+   value: ''
+  },
+  {
+   name: 'INT',
+   value: ''
+  },
+  {
+   name: 'CHA',
+   value: ''
+  },
+  {
+   name: 'END',
+   value: ''
+  },]
 });
 
-console.log(formData)
+console.log(formData.finalCharacterAttributes[1].name)
 const componentList = [
  <CreateButton
    page={page}

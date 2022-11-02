@@ -3,28 +3,28 @@ import { attributesName } from '../../../constants/constants';
 
 
 const FinalCharacter = ({ page, setPage, formData }) => {
-
-  let attributesFinalChar = [];
-  let attributesFinalRace = [];
-
-  formData.attributes.map((e) =>
-  attributesFinalChar.push(e)
- )
-  formData.raceAttributes.map((e) =>
-  attributesFinalRace.push(e)
- )
- 
-  let attributesSum = [];
-  function sumArrays(arr1, arr2) {
+ let finalCharacterAttributes = formData.finalCharacterAttributes;
+ let attributesSum = [];
+  function sumArrays (arr1, arr2) {
    for (let i = 0; i < 6; i++) {
     attributesSum.push(arr1[i] + arr2[i])
    }
    return attributesSum
  }
-   sumArrays(attributesFinalChar, attributesFinalRace)
-  let finalAttributesSum = attributesName.map(function (value, index) {
-   return [value, attributesSum[index]]
-  });
+ sumArrays(formData.attributes, formData.raceAttributes)
+
+ let finalAttributesSum =  attributesSum.map(e => {
+   return Math.floor((e - 10) / 2)
+ });
+
+ for (let i = 0; i < finalAttributesSum.length; i++) { 
+  finalCharacterAttributes[i].value = finalAttributesSum[i];
+ }
+ console.log(formData.attributes)
+ console.log(formData.raceAttributes)
+ console.log(attributesSum)
+ console.log(finalAttributesSum)
+ console.log(finalCharacterAttributes)
  return (
   <div>
    <div>
@@ -33,8 +33,8 @@ const FinalCharacter = ({ page, setPage, formData }) => {
     <p>{formData.class}</p>
       
     Your Character Attributes
-    {finalAttributesSum.map((e) =>
-     <li key={e.index}>{e[0]} - {Math.round(e[1] / 2)}</li>)}  
+    {finalCharacterAttributes.map((e) =>
+     <li key={e.index}>{e.name} {e.value}</li>)}  
    </div>
    <button onClick={() => {
      setPage(page - 1)
