@@ -1,10 +1,22 @@
 import style from './ChoseClass.module.css'
 import {classes} from '../../../constants/constants'
+import { useEffect, useState } from 'react';
 
-const Class = ({page, setPage, formData, setFormData}) => {
+
+const Class = ({ page, setPage, formData, setFormData }) => {
+ const [loaded, setLoaded] = useState(false)
+
+ useEffect(() => {
+  if (loaded) return ;
+  let attributes = Array.from({length: 6}, () => Math.floor(Math.random() * (20-1) + 1))
+  setFormData({ ...formData, attributes: attributes })
+  setLoaded(true)
+ }, [formData, loaded, setFormData]);
+ 
  let typeOfCharacter = classes;
+
  const receiveClassType = (e, character) => {
-  setFormData({ ...formData, class: character.name, attributes: character.attributes })
+  setFormData({ ...formData, class: character.name, })
   setPage(page + 1);
  }
  

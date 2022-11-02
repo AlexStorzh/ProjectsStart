@@ -1,5 +1,5 @@
 import React from 'react';
-import {race} from '../../../constants/constants'
+import {race,} from '../../../constants/constants'
 import style from './ChoseRace.module.css'
 
 const ChoseRace = ({page, setPage, formData, setFormData}) => {
@@ -18,7 +18,7 @@ let typeOfRace =race;
     >
      <h1> {e.race}</h1> 
      {e.attributes.map((attr) =>
-      <li value={attr.value} key={attr.key}>{attr.key} {attr.value}</li>)}
+      <li value={attr} key={attr.index}>{attr}</li>)}
     </div> 
    )}
    <button onClick={() => {
