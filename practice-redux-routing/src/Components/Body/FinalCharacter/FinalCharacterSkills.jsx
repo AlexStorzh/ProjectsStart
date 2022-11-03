@@ -5,7 +5,7 @@ import style from './FinalCharacter.module.css'
 const FinalCharacterSkills = ({ formData }) => {
 
  return (
-  <div className={style.class_value}>
+  <div className={style.finalCharacter_skills}>
    {skills.map((e) => {
     if (e.attribute === 'STR') {
      return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[0].value} ({e.attribute})</li>

@@ -1,4 +1,4 @@
-.container {
+.main_page_wrapper {
  color: white;
  margin: auto;
  max-width: 1320px;
@@ -7,7 +7,7 @@
 }
 .main_block {
  height: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }

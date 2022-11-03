@@ -83,7 +83,7 @@ const componentList = [
   <div className={style.container}>
    <div className={style.main_page_wrapper}>
     <div className={style.main_block}>
-     <div>{componentList[page]}</div>
+     {componentList[page]}
     </div>
    </div>
   </div>
