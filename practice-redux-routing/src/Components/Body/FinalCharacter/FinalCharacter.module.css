@@ -1,0 +1,25 @@
+.attributes {
+ display: flex;
+ list-style: none;
+}
+.modifires {
+ display: flex;
+ flex-direction: column;
+ border: 1px solid black;
+ padding: 4px;
+ font-size: large;
+ text-align: center;
+ justify-content: center;
+}
+.modifires_value {
+ margin: auto;
+}
+.skills {
+  border-top: 1px solid black;;
+  border-right: 1px solid black;;
+  border-bottom: 1px solid black;;
+  padding: 4px;
+}
+.class_value {
+ margin: auto;
+}
