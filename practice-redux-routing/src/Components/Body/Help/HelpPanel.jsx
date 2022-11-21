@@ -11,12 +11,7 @@ const HelpPanel = ({page, setPage}) => {
      setPage(page + 1)
     }}>Step-by-step</div>
     </div>
-      <br />
-      <button onClick={() => {
-     setPage(page - 1)
-    }}>
-        Previous
-      </button>
+      
    </div>
   </div>
  );

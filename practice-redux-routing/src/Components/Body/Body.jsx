@@ -6,49 +6,15 @@ import CharacterName from './CharacterName/CharacterName';
 import ChoseClass from './ChoseClass/ChoseClass';
 import ChoseRace from './ChoseRace/ChoseRace';
 import FinalCharacter from './FinalCharacter/FinalCharacter';
-
+import { finalCharacterFaucet } from '../../constants/FinalCharacter';
 
 const Body = () => {
 
 const [page, setPage] = useState(0);
-const [formData, setFormData] = useState({
- username: "",
- race: "",
- class: "",
- attributes: [],
- raceAttributes: [],
- finalCharacterAttributes: [
- {
-   name: 'Strenght',
-   value: ''
-  },
-  {
-   name: 'Dexterity',
-   value: ''
-  },
-  {
-   name: 'Constitution',
-   value: ''
-  },
-  {
-   name: 'Intelligence',
-   value: ''
-  },
-  {
-   name: 'Wisdom',
-   value: ''
-  },
-  {
-   name: 'Charisma',
-   value: ''
-  },]
-});
-
+ const [formData, setFormData] = useState(finalCharacterFaucet);
+ 
 const componentList = [
- <CreateButton
-   page={page}
-   setPage={setPage}
-  />,
+ 
  <HelpPanel
    page={page}
    setPage={setPage}

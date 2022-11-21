@@ -1,0 +1,38 @@
+
+/* .block {
+ display: flex;
+ justify-content: center;
+} */
+.input {
+ width: 1432px;
+ height: 48px;
+ font-size: 44px;
+}
+.button{
+ width: 100%;
+ background-color: #04AA6D;
+ border-top: none;
+ border-right: 1px solid black;
+ border-left: 1px solid black;
+ border-bottom: 1px solid black;
+ padding: 14px 28px;
+ font-size: 16px;
+ cursor: pointer;
+ text-align: center;
+}
+.button:first-child {
+ width: 100%;
+ background-color: #ff0000;
+ border-top: none;
+ border-right: 1px solid black;
+ border-left: 1px solid black;
+ border-bottom: 1px solid black;
+ padding: 14px 28px;
+ font-size: 16px;
+ cursor: pointer;
+ text-align: center;
+}
+.buttons_block {
+ display: flex;
+ justify-content: center;
+}

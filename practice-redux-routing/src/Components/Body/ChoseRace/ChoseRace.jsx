@@ -21,7 +21,7 @@ let typeOfRace =race;
       <li value={attr} key={attr.index}>{attr}</li>)}
     </div> 
    )}
-   <button onClick={() => {
+   <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>
         Previous

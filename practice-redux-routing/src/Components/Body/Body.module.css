@@ -1,13 +1,10 @@
 .main_page_wrapper {
- color: white;
  margin: auto;
- max-width: 1320px;
+ max-width: 1440px;
  width: 100%;
  margin: auto;
 }
 .main_block {
+ width: 1440px;
  height: 1000px;
- display: flex;
- justify-content: center;
- align-items: center;
 }

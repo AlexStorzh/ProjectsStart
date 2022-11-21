@@ -6,6 +6,12 @@ const classes = [
   description: "Rogue   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio"
  },
  {
+  name: 'Monk',
+  picture: ' ',
+  attributes: [],
+  description: "Rogue   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio"
+ },
+ {
   name: 'Warrior',
   picture: ' ',
   attributes: [],
@@ -28,6 +34,14 @@ const race = [
  {
   race: 'Human',
   attributes: [1, 1, 1, 1, 1, 1]
+ },
+ {
+  race: 'Dwarf',
+  attributes: [2, 0, 2, 0, 0, 0]
+ },
+ {
+  race: 'Elf',
+  attributes: [0, 2, 0, 2, 1, 1]
  },
 ]
 const attributesName = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];

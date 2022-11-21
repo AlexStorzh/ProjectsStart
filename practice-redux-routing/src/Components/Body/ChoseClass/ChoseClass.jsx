@@ -22,24 +22,24 @@ const Class = ({ page, setPage, formData, setFormData }) => {
  
 
  return (
+  <>
   <div className={style.template}>
    {typeOfCharacter.map((e) =>
     <div
-     title={e.description}
      className={style.card}
      key={e.name}
      onClick={(character) => receiveClassType(character, e)} 
     >
      <h1> {e.name}</h1> 
     </div> 
-   )}
-      <br />
-      <button onClick={() => {
+    )}
+    <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>
         Previous
       </button>
-  </div>
+   </div>
+   </>
  );
 };
 

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+
 import FinalCharacterSkills from './FinalCharacterSkills';
 import style from './FinalCharacter.module.css'
-import { attributesName } from '../../../constants/constants';
 
 
-const FinalCharacter = ({ page, setPage, formData }) => {
+
+const FinalCharacter = ({ page, setPage, formData, setFormData}) => {
 
  let finalCharacterAttributes = formData.finalCharacterAttributes;
  let attributesSum = [];
@@ -23,6 +23,7 @@ const FinalCharacter = ({ page, setPage, formData }) => {
  for (let i = 0; i < finalAttributesSum.length; i++) { 
   finalCharacterAttributes[i].value = finalAttributesSum[i];
  }
+
  return (
   <div >
    <div className={style.finalCharacter_wrapper}>
@@ -41,12 +42,13 @@ const FinalCharacter = ({ page, setPage, formData }) => {
      <div className={style.finalCharacter_info_bot}>
        <div className={style.finalCharacter_title}>Your Character Modifires</div>
         <div className={style.finalCharacter_modifires}>
-        {finalCharacterAttributes.map((e) => {
+       {finalCharacterAttributes.map((e) => {
          return (
           <>
            <div>
             <li key={e.index}>{e.name}</li>
             <p>{e.value}</p>
+             
            </div>
           </>
          )

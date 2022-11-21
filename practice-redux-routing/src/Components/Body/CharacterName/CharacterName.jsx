@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import style from '../CharacterName/CharacterName.module.css'
 
-const CharacterName = ({page, setPage, formData, setFormData}) => {
+
+
+const CharacterName = ({ page, setPage, formData, setFormData }) => {
+
+ const [value, setValue] = useState('');
+  const handleChange = (e) => {
+   setValue(e.target.value);
+   setFormData({ ...formData, username: e.target.value });
+  };
+
  return (
-  <div>
-   <input
+
+  <div className={style.block}>
+   <input 
+    className={style.input}
     type="text"
     placeholder='Your Character Name'
     value={formData.username}
-    onChange={(e) =>
-    setFormData({...formData, username: e.target.value})}
+    onChange={handleChange}
    />
-    <br />
-      <button onClick={() => {
+   <div className={style.buttons_block}>
+      <button disabled={!value} className={style.button} onClick={() => {
      setPage(page + 1)
     }}> 
         Submit
       </button>
-      <br />
-      <button onClick={() => {
+      <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>
         Previous
-      </button>
-  </div>
+    </button>
+    </div>
+   </div>
+
  );
 };
 

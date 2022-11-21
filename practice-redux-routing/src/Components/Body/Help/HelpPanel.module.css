@@ -1,20 +1,16 @@
 .container {
-  background-color: yellowgreen;
- display: grid;
- border-radius: 20px;
+ background-color: rgba(88, 86, 86, 0.288);
+ display: flex;
  border: 1px solid rgb(189, 102, 102);
- justify-content: space-between;
- align-items: center;
+ justify-content: space-around;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- cursor: pointer;
  height: 6vw 100%;
+ width: 1440px;
 }
 .help_pick {
  padding: 10px;
  color: white;
  font-size: 56px;
  text-align: center;
-}
-#step {
- border-top: 2px solid black;
+ cursor: pointer;
 }
