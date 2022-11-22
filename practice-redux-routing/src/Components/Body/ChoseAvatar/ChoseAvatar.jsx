@@ -1,10 +1,22 @@
 import React from 'react';
 import style from './ChoseAvatar.module.css'
-import elf from '../../../images/elf1.jpg'
-const ChoseAvatar = ({page, setPage,formData}) => {
+import { imageDataElf } from '../../../constants/imageData';
+
+
+const ChoseAvatar = ({ page, setPage, formData, setFormData }) => {
+
+ const receiveAvatar = (e, avatar) => {
+  setFormData({ ...formData, avatar: avatar.src })
+  setPage(page + 1);
+ }
  return (
   <div>
-  <img src={elf} alt="elf1" />
+   {imageDataElf.map((e) => {
+    return <img onClick={(avatar) => receiveAvatar(avatar, e)}
+     height='450px' width='300px'
+     src={e.src}
+     alt="" />
+   })}
    <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>

@@ -6,7 +6,7 @@ import Home from './Components/Body/Home';
 
 
 
-import {Routes, Route,Link,Outlet} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 const App = () => {
  return (

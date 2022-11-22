@@ -8,17 +8,17 @@ const FinalCharacterSkills = ({ formData }) => {
   <div className={style.finalCharacter_skills}>
    {skills.map((e) => {
     if (e.attribute === 'STR') {
-     return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[0].value} ({e.attribute})</li>
+     return <div><li key={e.index}>{e.name} <p>{formData.finalCharacterAttributes[0].value}</p> <p>({e.attribute})</p></li></div>
     } else if (e.attribute === 'DEX') {
-     return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[1].value} ({e.attribute})</li>
+     return <div><li key={e.index}>{e.name} <p>{formData.finalCharacterAttributes[1].value}</p> <p>({e.attribute})</p></li></div>
     } else if (e.attribute === 'CON') {
-     return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[2].value} ({e.attribute})</li>
+     return <div><li key={e.index}>{e.name} <p>{formData.finalCharacterAttributes[2].value}</p> <p>({e.attribute})</p></li></div>
     } else if (e.attribute === 'INT') {
-     return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[3].value} ({e.attribute})</li>
+     return <div><li key={e.index}>{e.name} <p>{formData.finalCharacterAttributes[3].value}</p> <p>({e.attribute})</p></li></div>
     } else if (e.attribute === 'WIS') {
-     return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[4].value} ({e.attribute})</li>
+     return <div><li key={e.index}>{e.name} <p>{formData.finalCharacterAttributes[4].value}</p> <p>({e.attribute})</p></li></div>
     } else if (e.attribute === 'CHA') {
-     return <li key={e.index}>{e.name} {formData.finalCharacterAttributes[5].value} ({e.attribute})</li>
+     return <div><li key={e.index}>{e.name} <p>{formData.finalCharacterAttributes[5].value}</p> <p>({e.attribute})</p></li></div>
     } return ''
    })}
   </div>

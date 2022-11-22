@@ -9,8 +9,7 @@ const Class = ({ page, setPage, formData, setFormData }) => {
  let typeOfCharacter = classes;
 
  const receiveClassType = (e, character) => {
-  setFormData({ ...formData, class: character.name, })
-  setFormData({ ...formData, hitDie: character.hitDie, })
+  setFormData({ ...formData, class: character.name, hitDie: character.hitDie, })
   setPage(page + 1);
  }
  

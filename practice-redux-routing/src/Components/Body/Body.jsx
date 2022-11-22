@@ -12,7 +12,6 @@ const Body = () => {
 
  const [page, setPage] = useState(0);
  const [formData, setFormData] = useState(finalCharacterFaucet);
- console.log(formData)
  const componentList = [
   <HelpPanel
    page={page}

@@ -60,6 +60,11 @@ const skills = [
   value: ''
  },
  {
+  name: 'Aerophobic',
+  attribute: 'DEX',
+  value: ''
+ },
+ {
   name: 'Animal Handling',
   attribute: 'WIS',
   value: ''

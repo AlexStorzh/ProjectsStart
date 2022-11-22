@@ -13,7 +13,7 @@
 
 .finalCharacter_wrapper::after {
  content: "";
- background-image: url(../../../images/dnd-5e-dragonlance-chapter-2-art-1.avif);
+ background-image: url(../../../images/1920x1080-terrain-wa.jpg);
  background-size:cover;
  position: absolute;
  inset: 0;
@@ -22,7 +22,8 @@
 }
 .finalCharacter_info {
  border: 1px solid black;
- margin: 12px;
+ border-right: none;
+ margin: 12px 0px 12px 12px;
  max-width: 550px;
 }
 .finalCharacter_info_top {
@@ -31,7 +32,6 @@
 .finalCharacter_avatar {
  height: 332px;
  width: 235px;
- background-color: red;
  border-right: 1px solid black;
  border-bottom: 1px solid black;
  border-bottom-right-radius: 10px;
@@ -55,18 +55,22 @@
 background-color: #8e7970;
 font-size: 20px;
 text-align: center;
-margin: 5px 0px 5px 0px;
+margin: 5px 0px 0px 0px;
 border-top: 1px solid black;
 border-bottom: 1px solid black;
 }
-.finalCharacter_hitpoints_box {
-display: flex;
+.finalCharacter_additional_attributes {
+display: grid;
+row-gap: 65px;
+grid-template-columns: 1fr 1fr 1fr;
+justify-content: space-between;
 text-align: center;
 align-items: end;
 background-color: #8e7970;
-padding-bottom: 10px;
+padding-bottom: 45px;
 }
-.finalCharacter_hitpoints_box p{
+
+.finalCharacter_additional_attributes p{
 border-radius: 50%;
 width: 18px;
 height: 18px;
@@ -76,51 +80,53 @@ border: 1px solid #f55449;
 color: #000;
 text-align: center;
 margin: 10px 77.6px 0px 77.6px;
-
 }
-.finalCharacter_info_bot {
-margin: 10px 10px 10px 10px;
-display: flex;
-flex-direction: column;
-height:fit-content;
+
+.finalCharacter_attributes {
+ width: 100%;
+ margin: 12px 12px 12px 0px;
+ border: 1px solid black;
 }
 .finalCharacter_title {
  text-align: center;
- font-size: 28px;
+ padding: 8px;
+ font-size: 30px;
+ border: 1px solid black;
+ background-color: #8e7970;
+ margin: 10px 5px 0px 5px;
 }
 .finalCharacter_modifires {
+ display: flex;
  list-style: none;
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- grid-template-rows: 1fr 1fr;
+ justify-content: space-around;
+ margin-top: 10px;
+ text-align: center;
 }
 .finalCharacter_modifires div {
- display: flex;
- flex-direction: column;
+ 
+ background-color: #8e7970;
  border: 1px solid black;
- border-radius: 10px;
- margin-top: 10px;
- width: 140px;
- height: 70px;
- text-align: center;
-}
-.finalCharacter_modifires p {
- margin-top: 15px;
-}
-.finalCharacter_skills {
- display: flex;
- flex-direction: column;
- row-gap: 5px;
- list-style: none;
- margin: 12px;
-}
-.finalCharacter_skills li {
- border: 1px solid black;
- border-radius: 10px;
- padding: 5px;
- text-align: center;
+ width: 130px;
 }
 
+.finalCharacter_skills {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+ gap: 2px;
+ margin: 10px 5px 0px 5px;
+ list-style: none;
+}
+
+.finalCharacter_skills div {
+ background-color: #8e7970;
+ border: 1px solid black;
+ height: 75px;
+ font-size: 15px;
+ text-align: center;
+}
+.finalCharacter_skills p {
+ margin: 0;
+}
 .button {
   width: 100%;
   background-color: #04AA6D;

@@ -2,6 +2,9 @@ const finalCharacterFaucet = {
  username: "",
  race: "",
  class: "",
+ level: 1,
+ history: "",
+ avatar: "",
  attributes: [],
  raceAttributes: [],
  finalCharacterAttributes: [
