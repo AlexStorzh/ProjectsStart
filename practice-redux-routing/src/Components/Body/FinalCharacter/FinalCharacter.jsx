@@ -29,7 +29,7 @@ const FinalCharacter = ({ page, setPage, formData, setFormData}) => {
    <div className={style.finalCharacter_wrapper}>
     <div className={style.finalCharacter_info}>
      <div className={style.finalCharacter_info_top}>
-      <div className={style.finalCharacter_avatar}> </div>
+      <div className={style.finalCharacter_avatar}/>
       <div className={style.finalCharacter_text}>
        <div>Name : {formData.username}</div>
        <div>Race : {formData.race}</div>
@@ -39,21 +39,18 @@ const FinalCharacter = ({ page, setPage, formData, setFormData}) => {
        <div>Level : 1</div> 
       </div>
      </div>
+     <div className={style.finalCharacter_hitpoints}>Hitpoints</div>
+     <div className={style.finalCharacter_hitpoints_box}>
+     <div>Your Current Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.hitDie}</p></div>
+     <div>Your Max Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.hitDie}</p></div>
+      <div>Your Hit Dice<p>{formData.hitDie}</p></div>
+      </div>
+      <div className={style.finalCharacter_additional_attributes}>
+       <div>Proficiency bonus</div>
+       <div>Passive wisdom</div>
+       <div>Inpiration</div>
+       </div>
      <div className={style.finalCharacter_info_bot}>
-       <div className={style.finalCharacter_title}>Your Character Modifires</div>
-        <div className={style.finalCharacter_modifires}>
-       {finalCharacterAttributes.map((e) => {
-         return (
-          <>
-           <div>
-            <li key={e.index}>{e.name}</li>
-            <p>{e.value}</p>
-             
-           </div>
-          </>
-         )
-        })}
-     </div>
        </div>
     </div>
       <FinalCharacterSkills formData={formData} />

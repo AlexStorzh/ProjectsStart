@@ -3,31 +3,36 @@ const classes = [
   name: 'Rogue',
   picture: ' ',
   attributes: [],
-  description: "Rogue   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio"
+  description: "Rogue   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio",
+  hitDie: 8,
  },
  {
   name: 'Monk',
   picture: ' ',
   attributes: [],
-  description: "Rogue   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio"
+  description: "Rogue   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio",
+  hitDie: 8,
  },
  {
   name: 'Warrior',
   picture: ' ',
   attributes: [],
-  description: "Warrior   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio"
+  description: "Warrior   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio",
+  hitDie: 10,
  },
  {
   name: 'Bard',
   picture: ' ',
   attributes: [],
-  description: "Bard   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio!"
+  description: "Bard   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio!",
+  hitDie: 8,
  },
  {
-  name: 'Mage',
+  name: 'Wizard',
   picture: ' ',
   attributes: [],
-  description: "Mage   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio!" 
+  description: "Mage   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi beatae exercitationem. Neque, quod voluptatum accusantium, odio blanditiis odit mollitia aliquid fugiat optio maxime deleniti ea! Cupiditate, doloribus soluta? Odio!",
+  hitDie: 6,
  },
 ]
 const race = [
