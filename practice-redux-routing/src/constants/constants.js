@@ -33,15 +33,18 @@ const classes = [
 const race = [
  {
   race: 'Human',
-  attributes: [1, 1, 1, 1, 1, 1]
+  attributes: [1, 1, 1, 1, 1, 1],
+  description: 'Human receive +1 for all attributes'
  },
  {
   race: 'Dwarf',
-  attributes: [2, 0, 2, 0, 0, 0]
+  attributes: [2, 0, 2, 0, 2, 0],
+  description: 'Dwarf receive +2 for Strange, Constitution and Wisdom'
  },
  {
   race: 'Elf',
-  attributes: [0, 2, 0, 2, 1, 1]
+  attributes: [0, 2, 0, 2, 1, 1],
+  description: 'Elf receive +2 for Dexterity and Intelligence, and +1 for Wisdom & Charisma'
  },
 ]
 const attributesName = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];

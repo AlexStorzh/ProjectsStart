@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
 .container {
- background-color: rgba(88, 86, 86, 0.288);
- display: flex;
- border: 1px solid rgb(189, 102, 102);
+ 
+ display: grid;
+ grid-template-columns: 1fr 1fr;
  justify-content: space-around;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- height: 6vw 100%;
  width: 1440px;
+ grid-gap: 1px;
+  
 }
 .help_pick {
+ background-color: #8E7970;
+ font-family: 'Sono', sans-serif;
  padding: 10px;
  color: white;
  font-size: 56px;

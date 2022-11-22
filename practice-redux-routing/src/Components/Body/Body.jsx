@@ -18,6 +18,8 @@ const componentList = [
  <HelpPanel
    page={page}
    setPage={setPage}
+   formData={formData}
+   setFormData={setFormData}
   />,
  <CharacterName
    page={page}

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import style from '../CharacterName/CharacterName.module.css'
 
 
 
 const CharacterName = ({ page, setPage, formData, setFormData }) => {
+
 
  const [value, setValue] = useState('');
   const handleChange = (e) => {
@@ -22,16 +23,16 @@ const CharacterName = ({ page, setPage, formData, setFormData }) => {
     onChange={handleChange}
    />
    <div className={style.buttons_block}>
-      <button disabled={!value} className={style.button} onClick={() => {
-     setPage(page + 1)
-    }}> 
-        Submit
-      </button>
       <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>
         Previous
     </button>
+      <button disabled={!value} className={style.button} onClick={() => {
+     setPage(page + 1)
+    }}> 
+        Submit
+      </button>
     </div>
    </div>
 

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+.navbar {
+ margin-top: 10px ;
+}
+.navbar_box {
+ border: 1px solid black;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ width: 1440px;
+ grid-gap: 1px;
+ margin: auto;
+
+}
+.nav_link {
+ background-color: #1B4b5A;
+ text-align: center;
+ font-family: 'Sono', sans-serif;
+ color: white;
+ text-decoration: none;
+ font-size: larger;
+ padding: 20px 40px 20px ;
+}
