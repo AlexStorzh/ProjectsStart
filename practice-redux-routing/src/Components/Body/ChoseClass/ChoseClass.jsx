@@ -1,13 +1,13 @@
 import style from './ChoseClass.module.css'
 import {classes} from '../../../constants/constants'
-
+import { getApiResource } from '../../../api/api';
 
 
 const Class = ({ page, setPage, formData, setFormData }) => {
  
  
  let typeOfCharacter = classes;
-
+ getApiResource()
  const receiveClassType = (e, character) => {
   setFormData({ ...formData, class: character.name, hitDie: character.hitDie, })
   setPage(page + 1);

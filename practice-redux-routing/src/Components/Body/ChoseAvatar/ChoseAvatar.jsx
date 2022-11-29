@@ -9,6 +9,7 @@ const ChoseAvatar = ({ page, setPage, formData, setFormData }) => {
   setFormData({ ...formData, avatar: avatar.src })
   setPage(page + 1);
  }
+ if (formData.race === 'Elf') {
  return (
   <div>
    {imageDataElf.map((e) => {
@@ -17,13 +18,21 @@ const ChoseAvatar = ({ page, setPage, formData, setFormData }) => {
      src={e.src}
      alt="" />
    })}
+  
    <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>
         Previous
       </button>
   </div>
- );
+ )
+ } else {
+  return  <button className={style.button} onClick={() => {
+     setPage(page - 1)
+    }}>
+        Previous
+      </button>
+  }
 };
 
 export default ChoseAvatar;

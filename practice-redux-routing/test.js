@@ -1,13 +1,16 @@
+// let url =
+// let promise =  fetch(url)
 
-        <div className={style.finalCharacter_modifires}>
-       {finalCharacterAttributes.map((e) => {
-         return (
-          <>
-           <div>
-            <li key={e.index}>{e.name}</li>
-            <p>{e.value}</p>
-           </div>
-          </>
-         )
-        })}
-     </div>
+// let classes =  Response.formData();
+
+// console.log(classes);
+
+
+fetch('https://www.dnd5eapi.co/api/classes/bard')
+  .then((response) => {
+    return response.json();
+  })
+ .then((data) => {
+  let bard = data;
+  console.log(bard);
+ });
