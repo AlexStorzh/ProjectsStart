@@ -1,15 +1,35 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getApiResource } from '../../api/api';
-const DND_ROOT = 'https://www.dnd5eapi.co/api/';
-const DND_CLASSES = 'classes/';
+import { DND_ROOT_CLASSES } from '../../constants/constantsApi';
+
 const Home = () => {
- getApiResource(DND_ROOT + DND_CLASSES);
+ const [classes, setClasses] = useState (null)
+ const getResource = async (url) => {
+  const res = await getApiResource(url)
+
+  const classList = res.results.map(({ name, url }) => {
+   return {
+    name,
+    url
+   }
+  })
+  setClasses(classList)
+ }
+
+ useEffect(() => { 
+  getResource(DND_ROOT_CLASSES)
+ }, []);
+
  return (
-  <div>
-   1111
-  </div>
+  <>
+   {classes && (
+    <ul>
+     {classes.map(({ name, url }) =>
+      <li>{name}</li>)}
+    </ul>
+  )}
+  </>
  );
 };
 

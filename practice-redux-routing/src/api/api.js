@@ -1,8 +1,13 @@
-const DND_ROOT = 'https://www.dnd5eapi.co/api/';
-const DND_CLASSES = 'classes/';
-
-export const getApiResource = (url) => {
- fetch(url)
-  .then(res => res.json())
-  .then(body => console.log(body))
-  };
+export const getApiResource = async (url) => {
+ try {
+  const res = await fetch(url);
+  if (!res.ok) {
+   console.error('Could not fetch.', res.status);
+   return false;
+  }
+  return await res.json()
+ } catch (error) {
+  console.error('Could not fetch.', console.error());
+   return false;
+ }
+}
