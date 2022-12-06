@@ -11,7 +11,6 @@ const CharacterName = ({ page, setPage, formData, setFormData }) => {
    setValue(e.target.value);
    setFormData({ ...formData, username: e.target.value });
   };
-
  return (
 
   <div className={style.block}>

@@ -1,27 +1,42 @@
 import React from 'react';
-import {race} from '../../../constants/constants'
+import { useEffect, useState } from 'react';
+import { getApiResource } from '../../../api/api';
 import style from './ChoseRace.module.css'
+import { DND_ROOT_RACES, DND } from '../../../constants/constantsApi';
 
-const ChoseRace = ({page, setPage, formData, setFormData}) => {
-let typeOfRace = race;
- const receiveRaceType = (e, chosen) => {
-  setFormData({ ...formData, race: chosen.race, raceAttributes: chosen.attributes })
+const ChoseRace = ({ page, setPage, formData, setFormData }) => {
+ 
+const [races, setRaces] = useState ()
+ const getResource = async (url) => {
+  const res = await getApiResource(url)
+  setRaces(res.results)
+ }
+
+ useEffect(() => { 
+  getResource(DND_ROOT_RACES)
+ }, []);
+
+ const handeClick = async (e, url) => {
+  const res = await getApiResource(DND + url)
+  setFormData({ ...formData, race: res })
   setPage(page + 1)
-}
+ }
+
  return (
   <>
-  <div className={style.template}>
-    {typeOfRace.map((e) =>
+   {races && (
+    <div className={style.template}>
+    {races.map(({index, name, url}) =>
      <div
      className={style.card}
-      key={e.race}
-      onClick={(chosen) => receiveRaceType(chosen, e)}
+      key={index}
+      onClick={(e) => handeClick(e, url)}
     >
-      <h1 className={style.h1 }> {e.race}</h1>
-      <p>{e.description}</p>
+      <h1 className={style.h1 }> {name}</h1>
     </div> 
    )}
-   </div>
+   </div>)}
+  
    <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>

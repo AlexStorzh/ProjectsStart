@@ -4,11 +4,10 @@ import style from './HelpPanel.module.css'
 const HelpPanel = ({ page, setPage, setFormData, formData }) => {
  
  const createBySite =() => {
- let attributes = Array.from({length: 6}, () => Math.floor(Math.random() * (20-1) + 1))
-  setFormData({ ...formData, attributes: attributes });
+ let stats = Array.from({length: 6}, () => Math.floor(Math.random() * (20-1) + 1))
+  setFormData({ ...formData, stats: stats });
   setPage(page + 1);
 }
-
  return (
   <div>
    <div className="help_wrapper">

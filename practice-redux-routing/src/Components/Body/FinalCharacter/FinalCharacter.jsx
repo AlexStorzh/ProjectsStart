@@ -1,34 +1,34 @@
-
+import { useEffect, useState } from 'react';
 import FinalCharacterSkills from './FinalCharacterSkills';
 import style from './FinalCharacter.module.css'
+import { getApiResource } from '../../../api/api';
+import { DND } from '../../../constants/constantsApi';
 
 
+const FinalCharacter = ({ page, setPage, formData, setFormData }) => {
+ 
 
-const FinalCharacter = ({ page, setPage, formData, setFormData}) => {
+ 
+  // let attributesSum = [];
+  // function sumArrays (arr1, arr2) {
+  //   for (let i = 0; i < 6; i++) {
+  //    attributesSum.push(arr1[i] + arr2[i])
+  //   }
+  //   attributesSum =  attributesSum.map(e => {
+  //   return Math.floor((e - 10) / 2)
+  // });
+  // }
+  // sumArrays(formData.attributes, formData.raceAttributes)
+  // for (let i = 0; i < attributesSum.length; i++) { 
+  //  formData.finalCharacterAttributes[i].value = attributesSum[i];
+  // }
 
- let finalCharacterAttributes = formData.finalCharacterAttributes;
- let attributesSum = [];
-  function sumArrays (arr1, arr2) {
-   for (let i = 0; i < 6; i++) {
-    attributesSum.push(arr1[i] + arr2[i])
-   }
-   return attributesSum
- }
- sumArrays(formData.attributes, formData.raceAttributes)
+console.log(formData);
 
- let finalAttributesSum =  attributesSum.map(e => {
-   return Math.floor((e - 10) / 2)
- });
-
- for (let i = 0; i < finalAttributesSum.length; i++) { 
-  finalCharacterAttributes[i].value = finalAttributesSum[i];
- }
-
-console.log(formData)
 
  return (
   <div >
-   <div className={style.finalCharacter_wrapper}>
+   {/* <div className={style.finalCharacter_wrapper}>
     <div className={style.finalCharacter_info}>
      <div className={style.finalCharacter_info_top}>
       <div className={style.finalCharacter_avatar} >
@@ -37,7 +37,7 @@ console.log(formData)
       <div className={style.finalCharacter_text}>
        <div>Name : {formData.username}</div>
        <div>Race : {formData.race}</div>
-       <div>Class : {formData.class}</div> 
+       <div>Class : {formData.class.name}</div> 
        <div>History : Monk</div> 
        <div>Attitude : Lawful Good</div> 
        <div>Level : {formData.level}</div> 
@@ -45,9 +45,9 @@ console.log(formData)
      </div>
      <div className={style.finalCharacter_hitpoints}>Additional Attributes</div>
     <div className={style.finalCharacter_additional_attributes}>
-       <div className={style.additional_attributes_template}>Your Current Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.hitDie}</p></div>
-       <div className={style.additional_attributes_template}>Your Max Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.hitDie}</p></div>
-       <div className={style.additional_attributes_template}>Your Hit Dice<p>{formData.hitDie}</p></div>
+       <div className={style.additional_attributes_template}>Your Current Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.class.hit_die}</p></div>
+       <div className={style.additional_attributes_template}>Your Max Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.class.hit_die}</p></div>
+       <div className={style.additional_attributes_template}>Your Hit Dice<p>{formData.class.hit_die}</p></div>
        <div className={style.additional_attributes_template}>Proficiency bonus<p>2</p></div>
       <div className={style.additional_attributes_template}>Passive wisdom<p>{formData.finalCharacterAttributes[5].value}</p></div>
        <div className={style.additional_attributes_template}>Inspiration<p>1</p></div>
@@ -56,7 +56,7 @@ console.log(formData)
     <div className={style.finalCharacter_attributes}>
      <div className={style.finalCharacter_title}>Your Character Modifires</div>
      <div className={style.finalCharacter_modifires}>
-       {finalCharacterAttributes.map((e) => {
+       {formData.finalCharacterAttributes.map((e) => {
          return (
           <>
            <div>
@@ -70,7 +70,7 @@ console.log(formData)
       <FinalCharacterSkills formData={formData} />
     </div>
     
-   </div>
+   </div> */}
    <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>

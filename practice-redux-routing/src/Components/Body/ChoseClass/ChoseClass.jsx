@@ -2,22 +2,16 @@ import React from 'react';
 import { useEffect, useState } from 'react'
 import style from './ChoseClass.module.css'
 import { getApiResource } from '../../../api/api';
-import { DND_ROOT_CLASSES } from '../../../constants/constantsApi';
+import { DND_ROOT_CLASSES, DND } from '../../../constants/constantsApi';
 
 
 const Class = ({ page, setPage, formData, setFormData }) => {
  
- const [classes, setClasses] = useState (null)
+ const [classes, setClasses] = useState ()
+ 
  const getResource = async (url) => {
   const res = await getApiResource(url)
-
-  const classList = res.results.map(({ name, url }) => {
-   return {
-    name,
-    url
-   }
-  })
-  setClasses(classList)
+  setClasses(res.results)
  }
 
  useEffect(() => { 
@@ -25,21 +19,21 @@ const Class = ({ page, setPage, formData, setFormData }) => {
  }, []);
 
  
- const showMessage = (e, name) => {
-  setFormData({ ...formData, class: name})
-  setPage(page + 1);
-  console.log(name);
+ const handleClick = async (e, url) => {
+  const res = await getApiResource(DND + url)
+  setFormData({ ...formData, class: res })
+  setPage(page + 1)
+  console.log(formData);
  }
-
  return (
   <>
    {classes && (
    <div className={style.template}>
-     {classes.map(({ name, url }) =>
+     {classes.map(({ index, name, url }) =>
       <div
      className={style.card}
-       key={name}
-       onClick={(e) => showMessage(e, name)}
+       key={index}
+       onClick={(e) => handleClick(e, url)}
     >
      <h1> {name}</h1> 
     </div> 

@@ -1,15 +1,9 @@
 const finalCharacterFaucet = {
- username: "",
- race: "",
- class: "",
+ username: '',
  level: 1,
- history: "",
- avatar: "",
- attributes: [],
- raceAttributes: [],
  finalCharacterAttributes: [
  {
-   name: 'Strenght',
+   name: 'Strength',
    value: ''
   },
   {
