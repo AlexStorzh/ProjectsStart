@@ -3,60 +3,41 @@ import FinalCharacterSkills from './FinalCharacterSkills';
 import style from './FinalCharacter.module.css'
 import { getApiResource } from '../../../api/api';
 import { DND } from '../../../constants/constantsApi';
-
-
+import ClassStats from '../ClassStats/ClassStats';
 const FinalCharacter = ({ page, setPage, formData, setFormData }) => {
- 
-
- 
-  // let attributesSum = [];
-  // function sumArrays (arr1, arr2) {
-  //   for (let i = 0; i < 6; i++) {
-  //    attributesSum.push(arr1[i] + arr2[i])
-  //   }
-  //   attributesSum =  attributesSum.map(e => {
-  //   return Math.floor((e - 10) / 2)
-  // });
-  // }
-  // sumArrays(formData.attributes, formData.raceAttributes)
-  // for (let i = 0; i < attributesSum.length; i++) { 
-  //  formData.finalCharacterAttributes[i].value = attributesSum[i];
-  // }
-
 console.log(formData);
-
-
  return (
   <div >
-   {/* <div className={style.finalCharacter_wrapper}>
+   <div className={style.finalCharacter_wrapper}>
     <div className={style.finalCharacter_info}>
      <div className={style.finalCharacter_info_top}>
       <div className={style.finalCharacter_avatar} >
        {<img className={style.finalCharacter_avatar} src={formData.avatar} alt="" />}
       </div>
       <div className={style.finalCharacter_text}>
-       <div>Name : {formData.username}</div>
-       <div>Race : {formData.race}</div>
-       <div>Class : {formData.class.name}</div> 
+       <div>Name : {formData.username} </div>
+       <div>Race : {formData.race.name} </div>
+       <div>Class :{formData.class.name} </div> 
        <div>History : Monk</div> 
        <div>Attitude : Lawful Good</div> 
-       <div>Level : {formData.level}</div> 
+       <div>Level :{formData.level} </div> 
       </div>
      </div>
      <div className={style.finalCharacter_hitpoints}>Additional Attributes</div>
     <div className={style.finalCharacter_additional_attributes}>
-       <div className={style.additional_attributes_template}>Your Current Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.class.hit_die}</p></div>
-       <div className={style.additional_attributes_template}>Your Max Hitpoints<p>{formData.finalCharacterAttributes[2].value + formData.class.hit_die}</p></div>
+      <div className={style.additional_attributes_template}>Your Current Hitpoints<p>{formData.class.hit_die + formData.stats[2].value }</p></div>
+       <div className={style.additional_attributes_template}>Your Max Hitpoints<p>{formData.class.hit_die + formData.stats[2].value }</p></div>
        <div className={style.additional_attributes_template}>Your Hit Dice<p>{formData.class.hit_die}</p></div>
-       <div className={style.additional_attributes_template}>Proficiency bonus<p>2</p></div>
-      <div className={style.additional_attributes_template}>Passive wisdom<p>{formData.finalCharacterAttributes[5].value}</p></div>
+       <div className={style.additional_attributes_template}>Proficiency bonus<p>{formData.level} </p></div>
+      <div className={style.additional_attributes_template}>Passive wisdom<p>{formData.stats[4].value + 10}</p></div>
        <div className={style.additional_attributes_template}>Inspiration<p>1</p></div>
      </div>
     </div>
     <div className={style.finalCharacter_attributes}>
      <div className={style.finalCharacter_title}>Your Character Modifires</div>
      <div className={style.finalCharacter_modifires}>
-       {formData.finalCharacterAttributes.map((e) => {
+      
+       {formData.stats.map((e) => {
          return (
           <>
            <div>
@@ -67,10 +48,10 @@ console.log(formData);
          )
         })}
      </div>
-      <FinalCharacterSkills formData={formData} />
+      {/* <FinalCharacterSkills formData={formData} /> */}
     </div>
     
-   </div> */}
+   </div>
    <button className={style.button} onClick={() => {
      setPage(page - 1)
     }}>
