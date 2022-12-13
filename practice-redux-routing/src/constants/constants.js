@@ -1,5 +1,6 @@
 
 const attributesName = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
+const attributesFullName = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
 const skills = [
  {
   name: 'Acrobatic',
@@ -97,4 +98,4 @@ const skills = [
   value: ''
  },
 ]
-export  { attributesName, skills}
+export  { attributesName, attributesFullName, skills}

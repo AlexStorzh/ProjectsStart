@@ -6,6 +6,7 @@ import CharacterName from './CharacterName/CharacterName';
 import ChoseClass from './ChoseClass/ChoseClass';
 import ChoseRace from './ChoseRace/ChoseRace';
 import FinalCharacter from './FinalCharacter/FinalCharacter';
+import ClassStats from './ClassStats/ClassStats';
 import { finalCharacterFaucet } from '../../constants/FinalCharacter';
 
 const Body = () => {
@@ -32,7 +33,13 @@ const Body = () => {
    setFormData={setFormData}
   />,
   <ChoseRace
-   page={page}
+  page={page}
+  setPage={setPage}
+  formData={formData}
+  setFormData={setFormData}
+  />,
+  <ClassStats
+    page={page}
    setPage={setPage}
    formData={formData}
    setFormData={setFormData}

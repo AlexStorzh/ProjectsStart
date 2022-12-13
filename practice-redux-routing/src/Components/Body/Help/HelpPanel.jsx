@@ -1,13 +1,24 @@
 import React from 'react';
 import style from './HelpPanel.module.css'
+import { attributesFullName } from '../../../constants/constants';
 
 const HelpPanel = ({ page, setPage, setFormData, formData }) => {
  
  const createBySite =() => {
- let stats = Array.from({length: 6}, () => Math.floor(Math.random() * (20-1) + 1))
-  setFormData({ ...formData, stats: stats });
-  setPage(page + 1);
+  let stats = Array.from({ length: 6 }, () => Math.floor(Math.random() * (20 - 1) + 1))
+  let nameStats = [];
+  for (let i = 0; i < attributesFullName.length; i++) {
+ nameStats.push({
+  name: attributesFullName[i],
+  value: stats[i]
+ })
+ 
 }
+  setFormData({ ...formData, stats: nameStats });
+  setPage(page + 1);
+ }
+ 
+
  return (
   <div>
    <div className="help_wrapper">

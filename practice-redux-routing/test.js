@@ -1,16 +1,14 @@
-// let url =
-// let promise =  fetch(url)
-
-// let classes =  Response.formData();
-
-// console.log(classes);
 
 
-fetch('https://www.dnd5eapi.co/api/classes/bard')
-  .then((response) => {
-    return response.json();
-  })
- .then((data) => {
-  let bard = data;
-  console.log(bard);
- });
+const arr1 = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
+const arr2 = [1, 2, 3, 4, 5, 6]
+let arr3 = [];
+
+for (let index = 0; index < arr1.length; index++) {
+ arr3.push({
+  name: arr1[index],
+  value: arr2[index]
+ })
+ 
+}
+console.log(arr3);
