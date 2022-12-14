@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css'
-import Body from './Components/Body/Body';
-import NavBar from './Components/NavBar/NavBar';
-import Home from './Components/Body/Home';
+import Constructor from './pages/Constructor/Constructor'
+import NavBar from './Navigation/NavBar';
+import Home from './pages/Home/Home';
+
 
 
 
@@ -14,7 +15,7 @@ const App = () => {
    <NavBar/>
    <Routes>
     <Route path='/' element={<Home/> } />
-    <Route path='/constructor' element={<Body/> } />
+    <Route path='/constructor' element={<Constructor />} />
    </Routes>
   </>
  );

@@ -5,7 +5,7 @@ import { getApiResource } from '../../../api/api';
 import { DND } from '../../../constants/constantsApi';
 import ClassStats from '../ClassStats/ClassStats';
 const FinalCharacter = ({ page, setPage, formData, setFormData }) => {
-console.log(formData);
+
  return (
   <div >
    <div className={style.finalCharacter_wrapper}>
@@ -48,7 +48,7 @@ console.log(formData);
          )
         })}
      </div>
-      {/* <FinalCharacterSkills formData={formData} /> */}
+      <FinalCharacterSkills formData={formData} />
     </div>
     
    </div>

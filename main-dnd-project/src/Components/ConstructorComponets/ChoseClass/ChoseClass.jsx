@@ -7,7 +7,8 @@ import { DND_ROOT_CLASSES, DND } from '../../../constants/constantsApi';
 
 const Class = ({ page, setPage, formData, setFormData }) => {
  const [classes, setClasses] = useState()
- 
+  console.log(formData);
+
  const getResource = async (url) => {
   const res = await getApiResource(url)
   setClasses(res.results)

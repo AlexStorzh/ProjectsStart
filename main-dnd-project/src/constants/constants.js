@@ -98,4 +98,5 @@ const skills = [
   value: ''
  },
 ]
+
 export  { attributesName, attributesFullName, skills}
