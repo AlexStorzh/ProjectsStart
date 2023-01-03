@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getApiResource } from '../../../api/api';
 import style from './ChoseRace.module.css'
 import { DND_ROOT_RACES, DND } from '../../../constants/constantsApi';
-import ModalWindow from '../../ModalWindow/ModalWindow';
+import ModalWindow from './ModalWindow.jsx'
 
 const ChoseRace = ({ page, setPage, formData, setFormData }) => {
  const [races, setRaces] = useState();

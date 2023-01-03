@@ -6,7 +6,7 @@ import { attributesFullName } from '../../../constants/constants';
 
 const CharacterName = ({ page, setPage, formData, setFormData }) => {
  
- const createBySite =() => {
+ const attributesRandom =() => {
   let stats = Array.from({ length: 6 }, () => Math.floor(Math.random() * (20 - 1) + 1))
   let nameStats = [];
   for (let i = 0; i < attributesFullName.length; i++) {
@@ -29,23 +29,22 @@ const CharacterName = ({ page, setPage, formData, setFormData }) => {
  return (
 
   <div className={style.block}>
-   <input 
+    <div className={style.avatar}>+</div>
+    <div className={style.character_input_box}>
+      <p className={style.character_name}>Character Name</p>
+      <input 
     className={style.input}
     type="text"
-    placeholder='Your Character Name'
     value={formData.username}
     onChange={handleChange}
    />
+   </div>
    <div className={style.buttons_block}>
-    <button className={style.button} onClick={() => {
-       setPage(page - 1);
-
-      }}>
-        Previous
-    </button>
-      <button disabled={!value} className={style.button} onClick={createBySite}> 
-        Submit
+   
+      <button disabled={!value} className={style.button} onClick={attributesRandom}> 
+      &gt;
       </button>
+   
     </div>
    </div>
 

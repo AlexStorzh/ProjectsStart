@@ -1,37 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+.block {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.avatar {
+    height: 120px;
+    width: 120px;
+    border: 1px dashed white;
+    cursor: pointer;
+    background: rgba(99, 98, 98, 0.464);
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
+.character_name {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+.character_input_box {
+    margin-left: 10px;
+}
 .input {
+ height: 60px;
  width: 100%;
- box-sizing: border-box;
  font-size: 44px;
  font-family: 'Sono', sans-serif;
+ border-radius: 10px;
 }
 .button{
  font-family: 'Sono', sans-serif;
- width: 100%;
- background-color: #f55449;
- 
- border-top: none;
- border-right: 1px solid black;
- border-left: 1px solid black;
- border-bottom: 1px solid black;
- padding: 14px 28px;
- font-size: 16px;
- cursor: pointer;
- text-align: center;
-}
-.button:first-child {
- width: 100%;
+ width: 70px;
  background-color: #04AA6D;
- border-top: none;
- border-right: 1px solid black;
- border-left: 1px solid black;
- border-bottom: 1px solid black;
- padding: 14px 28px;
+ height: 60px;
  font-size: 16px;
  cursor: pointer;
  text-align: center;
+ border-radius: 5px;
+ margin-left: 60px;
 }
-.buttons_block {
- display: flex;
- justify-content: center;
-}
+
